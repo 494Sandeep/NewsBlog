@@ -1,0 +1,50 @@
+<div id="addPost">
+    <button id="close" (click)="closeNav()">x</button>
+    <h1>Add new post!</h1>
+    <form [formGroup]="messageForm" (ngSubmit)="onsubmit(title, description,Posturl)">
+        <!-- title Field -->
+        <div class="input-group">
+            <label>
+                Title:
+            </label>
+            <input #title type="text" formControlName="title" [ngClass]="{
+                    success :messageForm.controls.title.valid,
+                    danger : ( messageForm.controls.title.invalid && messageForm.controls.title.touched )
+                }
+                    ">
+            <div *ngIf="submitted && messageForm.controls.title.errors" class="error">
+                <div *ngIf="messageForm.controls.title.errors.required"> Your Title is Required !</div>
+            </div>
+        </div>
+        <!---URL-->
+        <div class="input-group">
+            <label>
+                Posturl:
+            </label>
+            <input #Posturl type="text" formControlName="Posturl" [ngClass]="{
+                    success :messageForm.controls.Posturl.valid,
+                    danger : ( messageForm.controls.Posturl.invalid && messageForm.controls.Posturl.touched )
+                }
+                    ">
+            <div *ngIf="submitted && messageForm.controls.Posturl.errors" class="error">
+                <div *ngIf="messageForm.controls.Posturl.errors.required"> url is Required !</div>
+            </div>
+        </div>
+        <!-- description field -->
+        <div class="input-group">
+            <label>
+                Description:
+            </label>
+            <textarea #description name="description" formControlName="description" cols="30" rows="5" [ngClass]="{
+                    success :messageForm.controls.description.valid,
+                    danger : ( messageForm.controls.description.invalid && messageForm.controls.description.touched )
+                }
+                    "></textarea>
+            <div *ngIf="submitted && messageForm.controls.description.errors" class="error">
+                <div *ngIf="messageForm.controls.description.errors.required"> Please enter your query !</div>
+            </div>
+        </div>
+        <!-- submit button -->
+        <input type="submit" value="Send Measage" class="cta">
+    </form>
+</div>

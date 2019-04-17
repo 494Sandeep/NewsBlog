@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script|ZCOOL+XiaoWei');
+$primary-color: #df2029;
+$secondary-color:#34465d;
+.container{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .post{
+        margin-bottom: 5px;
+        background: #F1F8E9;
+        width: 80%;
+        padding: 20px;   
+        .title{
+            font-family: Courgette;
+            font-size: 20px;
+            padding-bottom: 10px;
+            a{
+                color: Black;
+                &:hover{
+                    color:$primary-color;
+                    transition: 0.3s;
+                }
+            }
+        }
+        .description{
+            font-family: 'ZCOOL XiaoWei', serif;
+            p{
+                color:black;
+            }
+        }
+        .additional{
+            display: flex;
+            .addedBy{
+                flex: 2;
+                span{
+                        font-family: 'Dancing Script', cursive;
+                }
+            }
+            .vote{
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                b{
+                    margin-right: 20px;
+                }
+                .upvote{
+                    flex: 1;
+                    cursor: pointer;
+                    a{
+                        color:green;
+                    }
+                }
+                .downvote{
+                    flex:1;
+                    cursor: pointer;
+                    a{
+                        color:$primary-color;                  
+                    }
+                }
+            }
+        }
+        &:hover{
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #00AFF0;
+            box-shadow: 2px 3px 2px  hsla(212, 11%, 33%, 0.424);
+            cursor: default;
+        }
+    }
+    span.addPostIcon{
+        position: fixed;
+        top:85%;
+        left: 90%;
+        button{
+            border-radius: 20px;
+            font-size: 40px;
+            padding: 0px 10px;
+            color:$primary-color;
+            background: transparent;
+            border: 2px solid $primary-color;
+            cursor: pointer;
+            &:hover{
+                color:white;
+                background: $primary-color;
+                transition: 0.3s ease-in-out;
+            }
+            &:focus{
+                outline-style: none;
+            }
+        }
+    }
+}

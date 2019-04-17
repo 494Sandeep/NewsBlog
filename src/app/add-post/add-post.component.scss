@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script|ZCOOL+XiaoWei');
+$primary-color: #df2029;
+$secondary-color:#34465d;
+#addPost{
+    position: relative;
+    text-align: left;
+    h1{
+        font-family: 'ZCOOL XiaoWei', serif;
+        font-weight: 700;
+        padding-left: 30px;
+        color: $primary-color;
+    }
+    #close{
+        position: absolute;
+        right: 10px;
+        top:10px;
+
+    }
+    button{
+        border-radius: 20px;
+        font-size: 35px;
+        padding:0 12px 4px 12px;
+        color:white;
+        background: transparent;
+        border: 2px solid white;
+        cursor: pointer;
+        &:hover{
+            color:$secondary-color;
+            background: white;
+            transition: 0.3s ease-in-out;
+        }
+        &:focus{
+            outline-style: none;
+        }
+    }
+}
+
+form{
+    
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    color: black;
+    width :80%;
+    margin: auto;
+    h4{
+        color:#09b83e;
+    }
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        label{
+            flex:1;
+            margin: 15px 0;
+        }
+        input, textarea{
+            flex:2;
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: 1px solid black;
+            &:focus{
+                outline-style: none;
+                border:1px solid #0084ff;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        .success{
+            border:1px solid green;
+        }
+        .danger{
+            border:1px solid #cd201f;
+        }
+        .error{
+            color: #cd201f;
+        }
+    }
+    .cta{
+        padding: 5px 10px;
+        font-size: 15px;
+        border-radius: 4px;
+        background: transparent;
+        color: #007ee5;
+        border: 1px solid #007ee5;
+        &:hover{
+            outline-style: none;
+            border:1px solid #007ee5;
+            background: #007ee5;
+            cursor: pointer;
+            color:white;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+#addPost{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #3b4c62f6;
+    overflow-x: hidden;
+    transition: 0.6s;
+    padding-top: 60px;
+}

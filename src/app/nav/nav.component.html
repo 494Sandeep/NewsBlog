@@ -1,0 +1,14 @@
+<header>
+  <div class="title">
+    <a routerLink="/"><img src="../../assets/image/crearlogogratis_1024x1024_01.png" alt="logo">News Blog</a>
+  </div>
+  <nav>
+    <div *ngIf="isloggedIn; then thenBlock; else elseBlock;"></div>
+    <ng-template #thenBlock>
+      <p>{{loginUser}}</p>
+    </ng-template>
+    <ng-template #elseBlock>
+      <a routerLink="/join_us">login / Signup</a>
+    </ng-template>
+  </nav>
+</header>

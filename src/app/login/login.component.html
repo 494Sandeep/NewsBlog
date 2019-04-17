@@ -1,0 +1,33 @@
+<section class="cover">
+  <div class="join_us">
+    <div class="flex_heading">
+      <a href="/login" class="active">Login</a>
+      <a href="/join_us">Create your account</a>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)='loginFormSubmit(username,password)' id="login">
+      <div class="input-group">
+        <label>
+          Username
+        </label>
+        <input type="text" formControlName="username" #username placeholder="John Smith" inputmode="kana-name"  [ngClass]="{
+          danger:(loginForm.controls.username.invalid && loginForm.controls.username.touched),
+          success:loginForm.controls.username.valid
+            }">
+      </div>
+      <div class="input-group">
+        <label>
+          Password
+        </label>
+        <input type="password" formControlName="password" #password minlength="8" placeholder="*************"  [ngClass]="{
+          danger:(loginForm.controls.password.invalid && loginForm.controls.password.touched),
+          success:loginForm.controls.password.valid
+            }">
+      </div>
+      <div class="input-group">
+        <input type="submit" value="Login" class="button">
+      </div>
+      <p class="forgot"><u>Forgot your password?</u></p>
+    </form>
+  </div>
+</section>

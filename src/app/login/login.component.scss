@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script|ZCOOL+XiaoWei');
+$primary-color: #e67e22;
+$secondary-color:#caced16b;
+$danger:#df2029;
+$success:#09b83e;
+@media screen and (max-width: 1050px) {
+    .join_us{
+        width: 70% !important;
+        transition: 0.3s ease-in-out;
+    }
+}
+@media screen and (max-width: 700px) {
+    .join_us{
+        width: 85% !important;
+        transition: 0.3s ease-in-out;
+    }
+}
+@media screen and (max-width: 500px) {
+    .join_us{
+        width: 95% !important;
+        transition: 0.3s ease-in-out;
+        .flex_heading{
+            font-size: 15px !important;
+        }
+    }
+}
+.join_us{
+    font-family: 'ZCOOL XiaoWei', serif;
+    box-sizing: border-box;
+    width: 50%;
+    margin: 50px auto;
+    text-align: left;
+    box-shadow: 1px 1px 1px 1px #bdc3c7;
+    padding: 20px 30px;
+    .flex_heading{
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        a{
+            padding: 12px 20px;
+            color: #5a5c5d;   
+        }
+        a.active{
+            color: #0084ff;
+            border-bottom: 2px solid #0084ff;
+        }
+    }
+    h2{
+        text-align: center;
+        color: $primary-color;
+        font-size: 20px;
+    }
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        padding: 18px 0;
+        label{
+            color: Black;
+            font-size: 18px;
+            padding: 12px 0;
+            font-weight: 700;
+        }
+        input{
+            font-family: 'ZCOOL XiaoWei', serif;
+            border:none;
+            font-size: 18px;
+            padding: 5px 10px;
+            color: black;
+            border-radius: 4px;
+            border:2px solid #cbced1c5;
+            padding: 10px 10px;
+            &:focus{
+                outline-style: none;
+                border: 2px solid #00AFF0;
+            }
+        }
+        .button{
+            color:white;
+            background: #036f59;
+            border-radius: 4px;
+            padding:12px 0;
+            border-color: transparent;
+            cursor: pointer;
+            &:hover,:focus,:active{
+                transition: 0.4s;
+                background: #0e9479;
+                color: white;
+                border-color: transparent;
+            }
+        }
+        .danger{
+            border:2px solid $danger;
+        }
+        .success{
+            border:2px solid $success;
+        }
+    }
+    p.forgot{
+        text-align: left;
+        font-size: 16px;
+        color:#5a5c5d;
+
+    }
+}

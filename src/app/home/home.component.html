@@ -1,0 +1,21 @@
+<app-add-post></app-add-post>
+<div class="container">
+  <div class="post" *ngFor='let post of BlogPost ' id="post">
+    <div class="title"><a href={{post.link}}>{{post.title }}</a></div>
+    <div class="description">
+      <p>{{post.Description}}</p>
+    </div>
+    <div class="additional">
+      <div class="addedBy">Added By : <span> {{post.name}}</span></div>
+      <div class="vote">
+        <b>Votes</b>
+        <div class="upvote"><a (click)="changevote(post , 'upvote')"><i class="fas fa-angle-up"></i> {{post.upvote}}</a></div>
+        <div class="downvote"><a (click)="changevote(post , 'downvote')"><i class="fas fa-angle-down"></i>
+            {{post.downvote}}</a></div>
+      </div>
+    </div>
+  </div>
+  <span class="addPostIcon">
+    <button (click)="show()" id="add">+</button>
+  </span>
+</div>

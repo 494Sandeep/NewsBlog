@@ -1,0 +1,56 @@
+<section class="cover">
+  <div class="join_us">
+    <div class="flex_heading">
+      <a href="/login">Login</a>
+      <a href="/join_us" class="active">Create your account</a>
+    </div>
+    <form [formGroup]="signUpForm" (ngSubmit)='signUpFormSubmit(username,email,password)' id="signup">
+      <div class="input-group">
+        <label>
+          Username
+        </label>
+        <input type="text" formControlName="username" #username placeholder="John Smith" inputmode="kana-name"
+          [ngClass]="{
+            danger:(signUpForm.controls.username.invalid && signUpForm.controls.username.touched),
+            success:signUpForm.controls.username.valid
+              }">
+      </div>
+      <div class="input-group">
+        <label>
+          Email
+        </label>
+        <input type="email" formControlName="email" #email placeholder="johnsmith@gmail.com" [ngClass]="{
+          danger:(signUpForm.controls.email.invalid && signUpForm.controls.email.touched),
+          success:(signUpForm.controls.email.valid && signUpForm.controls.email.touched && signUpForm.controls.email.value !=='')
+            }">
+      </div>
+      <div class="input-group">
+        <label>
+          Password
+        </label>
+        <input type="password" formControlName="password" #password minlength="8" placeholder="*************" [ngClass]="{
+          danger:(signUpForm.controls.password.invalid && signUpForm.controls.password.touched),
+          success:signUpForm.controls.password.valid
+            }">
+      </div>
+      <div class="input-group">
+        <label>
+          Confirm Password
+        </label>
+        <input type="password" formControlName="confirmPassword" #confirmPassword minlength="8" placeholder="*************"
+          [ngClass]="{
+          danger:(!(signUpForm.controls.password.value == signUpForm.controls.confirmPassword.value ) && signUpForm.controls.password.touched),
+          success:(signUpForm.controls.password.value == signUpForm.controls.confirmPassword.value ) && signUpForm.controls.password.touched
+            }">
+      </div>
+      <div>
+        <input type="checkbox" name="check" formControlName="check" #check required> I accept all terms and conditions.
+      </div>
+      <div class="input-group">
+        <button type="submit" class="button" (ngDisabled)='true'>Create Account</button>
+      </div>
+      <p class="muted">By joining, you agree to our <u>Terms of Service</u> and <u>Privacy Policy</u></p>
+    </form>
+
+  </div>
+</section>

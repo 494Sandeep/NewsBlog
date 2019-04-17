@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script|ZCOOL+XiaoWei');
+$primary-color: #df2029;
+$secondary-color:#34465d;
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $secondary-color;
+    margin-bottom: 20px;
+    .title{
+        flex-grow: 1;
+        font-family: 'ZCOOL XiaoWei', serif;
+        font-weight: 700;
+        padding: 20px;
+        font-size: 20px;
+        a{
+            color: $primary-color;
+        }
+        img{
+            width: 20px;
+            height: auto;
+            margin-right: -10px;
+        }
+    }
+    nav{
+        padding: 15px 20px;
+        font-family: 'Dancing Script', cursive;
+        font-size: 18px;
+        a{
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            &:hover{
+                color: #df2029;
+                transition: 0.3s;
+            }
+        }
+    }
+}

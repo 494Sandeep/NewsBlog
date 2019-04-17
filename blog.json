@@ -1,0 +1,88 @@
+{
+  "post": [
+    {
+      "id": 1,
+      "name": "Sandeep Singh",
+      "title": "Angular 7",
+      "Description": "Angular 7 was just released and while it looks a little light on new features, there are some very interesting new tooling changes as well as some great features to improve performance. And continuing the recent trend from previous versions, upgrading is a breeze (and actually faster than ever).",
+      "link": "https://angular.io/guide/quickstart",
+      "upvote": 11,
+      "downvote": 3
+    },
+    {
+      "id": 2,
+      "name": "Naman Mittal",
+      "title": "Ember js",
+      "Description": "Ember is a JavaScript front-end framework designed to help you build websites with rich and complex user interactions. It does so by providing developers both with many features that are essential to manage complexity in modern web applications, as well as an integrated development toolkit that enables rapid iteration.",
+      "link": "https://www.emberjs.com/",
+      "upvote": 11,
+      "downvote": 3
+    },
+    {
+      "id": 3,
+      "name": "Abhishek Shukla",
+      "title": "Node js",
+      "Description": "As an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications. In the following 'hello world' example, many connections can be handled concurrently. Upon each connection the callback is fired, but if there is no work to be done, Node will sleep.",
+      "link": "https://nodejs.org/en/",
+      "upvote": 16,
+      "downvote": 6
+    },
+    {
+      "id": 4,
+      "name": "Rajin Nath",
+      "title": "MongoDB",
+      "Description": "The best MongoDB experience. Access data directly from your frontend code, intelligently distribute data for global apps, trigger serverless functions in response to data changes, and much more.",
+      "link": "https://www.mongodb.com/",
+      "upvote": 20,
+      "downvote": 6
+    },
+    {
+      "name": "unknown",
+      "title": "ReactJS",
+      "Description": "In computing, React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications",
+      "id": 6,
+      "upvote": 10,
+      "downvote": 3
+    },
+    {
+      "name": "unknown",
+      "title": "HTTP post",
+      "Description": "The HTTP POST method has many uses but mostly used when we need to add new data on the server so let's take an example of adding a new customer to our REST API server database using the post() method of the HttpClient class:",
+      "id": 8,
+      "upvote": 10,
+      "downvote": 0
+    },
+    {
+      "name": "unknown",
+      "title": "Instagram",
+      "Description": "Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger, and launched in October 2010 exclusively on iOS.",
+      "upvote": 11,
+      "downvote": 0,
+      "link": "https://www.instagram.com/accounts/login/?hl=en",
+      "id": 9
+    },
+    {
+      "name": "unknown",
+      "title": "Facebook",
+      "Description": "Facebook, Inc. is an American online social media and social networking service company based in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg, along with fellow Harvard College students and roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes",
+      "upvote": 10,
+      "downvote": 3,
+      "link": "https://www.facebook.com/",
+      "id": 10
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "username": "Sandeep Singh",
+      "email": "494sandeep@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 2,
+      "username": "Naman Mittal",
+      "email": "namanmittal@gmail.com",
+      "password": "12345"
+    }
+  ]
+}
